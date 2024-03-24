@@ -1,4 +1,3 @@
-{% extends "base.html" %}
 {% load static %}
 
 <div class="collapse navbar-collapse" id="main-nav">
@@ -8,57 +7,6 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="tech-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tech
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="tech-link">
-                <a href="" class="dropdown-item">Laptops</a>
-                <a href="" class="dropdown-item">Mobiles</a>
-                <a href="" class="dropdown-item">Tablets</a>
-                <a href="" class="dropdown-item">Mp3 Players</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Accessories
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
-                <a href="" class="dropdown-item">Fitness Devices</a>
-                <a href="" class="dropdown-item">Watches</a>
-                <a href="" class="dropdown-item">All other things</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
-            </div>
-        </li>
-    </ul>
-</div>
-
-<div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
-            </a>
-            <div class="dropdown-menu" aria-labelledby="all-products-link">
                 <a href="#" class="dropdown-item">
                     <img src="{% static 'images/by-price.jpg' %}" alt="By Price">
                     By Price
@@ -77,12 +25,12 @@
                 </a>
             </div>
         </li>
-        
+
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="tech-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Tech
             </a>
-            <div class="dropdown-menu" aria-labelledby="tech-link">
+            <div class="dropdown-menu border-0" aria-labelledby="tech-link">
                 <a href="#" class="dropdown-item">
                     <img src="{% static 'images/laptops.jpg' %}" alt="Laptops">
                     Laptops
@@ -101,12 +49,12 @@
                 </a>
             </div>
         </li>
-        
+
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
-            <div class="dropdown-menu" aria-labelledby="accessories-link">
+            <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
                 <a href="#" class="dropdown-item">
                     <img src="{% static 'images/fitness-devices.jpg' %}" alt="Fitness Devices">
                     Fitness Devices
@@ -121,12 +69,12 @@
                 </a>
             </div>
         </li>
-        
+
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
-            <div class="dropdown-menu" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <a href="#" class="dropdown-item">
                     <img src="{% static 'images/new-arrivals.jpg' %}" alt="New Arrivals">
                     New Arrivals
