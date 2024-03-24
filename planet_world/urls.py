@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from home import views  # Import views module from home app
+from home import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
-    path('my-profile/', views.my_profile, name='my_profile'),  # Correctly referencing my_profile view
+    path('my-profile/', views.my_profile, name='my_profile'), 
     path('product_management/', views.product_management, name='product_management'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
