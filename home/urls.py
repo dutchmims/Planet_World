@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.index, name='home'),
     # Add URL pattern for the profile page
     path('my-profile/', views.my_profile, name='my_profile'),
+    path('profile/', views.my_profile, name='profile'),
 ]
