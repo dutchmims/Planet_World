@@ -18,10 +18,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from home import views as home_views  
-
-
 from checkout.views import checkout_view, order_confirmation_view
 from bag import urls as bag_urls
+from bag import views as bag_views  # Import the views from the bag app
 
 urlpatterns = [
     path('', home_views.index, name='home'),
@@ -33,4 +32,5 @@ urlpatterns = [
     path('checkout/', checkout_view, name='checkout'),
     path('order_confirmation/', order_confirmation_view, name='order_confirmation'),
     path('bag/', include(bag_urls)),
+    path('view-bag/', bag_views.view_bag, name='view_bag'),  # Corrected URL pattern
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
