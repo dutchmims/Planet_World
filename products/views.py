@@ -23,16 +23,9 @@ class ProductUpdateView(UpdateView):
     model = Product
     template_name = 'product_form.html'
     fields = ['name', 'description', 'price']
-    
-
-class ProductDeleteView(DeleteView):
-    model = Product
-    template_name = 'product_confirm_delete.html'
-    success_url = reverse_lazy('product-list')
 
 
 class ProductDeleteView(DeleteView):
     model = Product
     template_name = 'product_confirm_delete.html'
     success_url = reverse_lazy('products') 
-    

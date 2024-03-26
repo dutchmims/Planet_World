@@ -32,5 +32,6 @@ urlpatterns = [
     path('checkout/', checkout_view, name='checkout'),
     path('order_confirmation/', order_confirmation_view, name='order_confirmation'),
     path('bag/', include(bag_urls)),
-    path('view-bag/', bag_views.view_bag, name='view_bag'),  # Corrected URL pattern
+    path('view-bag/', bag_views.view_bag, name='view_bag'),
+    path('products/', include('products.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
