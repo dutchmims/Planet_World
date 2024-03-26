@@ -1,4 +1,5 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from .models import Product
 
@@ -29,3 +30,8 @@ class ProductDeleteView(DeleteView):
     model = Product
     template_name = 'product_confirm_delete.html'
     success_url = reverse_lazy('products') 
+
+
+def all_products(request):
+    products = Product.objects.all()
+    return render(request, 'product_list.html', {'products': products})
