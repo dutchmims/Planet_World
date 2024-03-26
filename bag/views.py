@@ -1,4 +1,3 @@
-# bag/views.py
 from django.shortcuts import render
 from .models import Item
 
