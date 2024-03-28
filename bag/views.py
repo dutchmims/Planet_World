@@ -99,3 +99,8 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
+
+
+def bag_view(request):
+    # Your view logic here
+    return render(request, 'bag/bag.html')
