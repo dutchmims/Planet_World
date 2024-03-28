@@ -17,21 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from home import views as home_views  
-from checkout.views import checkout_view, order_confirmation_view
-from bag import urls as bag_urls
-from bag import views as bag_views  # Import the views from the bag app
 
 urlpatterns = [
-    path('', home_views.index, name='home'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('profile/', home_views.profile_view, name='profile'),
-    path('my-profile/', home_views.my_profile, name='my_profile'), 
-    path('product_management/', home_views.product_management, name='product_management'),
-    path('checkout/', checkout_view, name='checkout'),
-    path('order_confirmation/', order_confirmation_view, name='order_confirmation'),
-    path('bag/', include(bag_urls)),
-    path('view-bag/', bag_views.view_bag, name='view_bag'),
+    path('', include('home.urls')),
     path('products/', include('products.urls')),
+    path('bag/', include('bag.urls')),
+    path('checkout/', include('checkout.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
